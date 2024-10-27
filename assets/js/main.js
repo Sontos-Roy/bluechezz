@@ -152,15 +152,9 @@
     $('.filter .dp_down').click(function(){
       $(this).siblings('.dp_div').slideToggle();
     })
-    $('.lg_toggle_filter').click(function(e){
+    $('.toggle_filter').click(function(e){
       e.preventDefault();
-      $(this).toggleClass('active');
-      $('.filter_box .filter').toggle(300);
-    })
-    $('.sm_toggle_filter').click(function(e){
-      e.preventDefault();
-      $(this).toggleClass('active');
-      $('.filter_box .filter').addClass('active');
+      $('.filter_box .filter').toggleClass('active');
     })
     $('.filter_dismiss').click(function(){
       $('.sm_toggle_filter').toggleClass('active');
@@ -199,7 +193,33 @@
 // multiLevelMenu.forEach((mlItem, index)=>{
   
 // })
-
+$(document).ready(function() {
+  const productItems = $('.product_section_box .row > div');
+  
+  // Set the default column class to 'col-5' on page load
+  productItems.addClass('col-5');
+  
+  // Handle click on column toggler buttons
+  $('.grid_list_toggler button').on('click', function() {
+    const colType = $(this).data('col'); // Get the column type from the button's data attribute
+    
+    // Remove active class from all buttons
+    $('.grid_list_toggler button').removeClass('active');
+    
+    // Add active class to the clicked button
+    $(this).addClass('active');
+    
+    // Remove existing column classes from product items
+    productItems.removeClass('col-1 col-2 col-3 col-4 col-5 col-6 list-view list_view');
+    
+    // Apply the new column class based on the selected button
+    if (colType === 'list') {
+      productItems.addClass('list-view list_view');
+    } else {
+      productItems.addClass('col-' + colType);
+    }
+  });
+});
 $(document).ready(function(){
   $(".multi-level-menu-wrapper").each(function(index,mlMenu){
     var subMenuItems = $(mlMenu).find(".hasSubMenu");

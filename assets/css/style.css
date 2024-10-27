@@ -426,13 +426,7 @@ input:focus-visible {
     width: 50px;
   }
 }
-.header_font{
-  font-family: var(--poppins), sans-serif;
-  font-size: 20px;
-  font-weight: 400;
-  line-height: 20px;
-  font-style: normal;
-}
+
 
 .nav_slider_box{
   width: 100%;
@@ -558,6 +552,55 @@ img {
   max-width: 100%;
   vertical-align: middle;
 }
+.header_font{
+  font-family: var(--poppins), sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 20px;
+  font-style: normal;
+}
+.poppins_font{
+  font-family: var(--poppins), sans-serif;
+  font-size: 25px;
+  font-weight: 600;
+  line-height: 25px;
+  font-style: normal;
+  color: #222 !important;
+  
+}
+.segeo_font{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  font-style: normal;
+  color: #505050;
+}
+.segeo_font_2{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 26px;
+  font-style: normal;
+  color: #696969;
+}
+.segeo_font_3{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+  font-style: normal;
+  color: #505050;
+}
+.segeo_font_4{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 14px;
+  font-style: normal;
+  color: #fff;
+}
+
 .font_line{
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-weight: 400;
@@ -565,6 +608,7 @@ img {
   line-height: 36px;
   font-style: normal;
 }
+
 
 .News_link{
   font-size: 30px;
@@ -606,10 +650,10 @@ img {
 }
 .Office_text{
   font-size: 30px;
-  right: 50px;
+  right: 80px;
   text-align: right;
   position: absolute;
-  top: 50%;
+  top: 180px;
   color: #fff;
   padding: 20px;
   
@@ -636,13 +680,19 @@ img {
 .Belwary_text{
   
   font-size: 30px;
-  left: 50px;
+  left: 80px;
   position: absolute;
-  top: 50%;
+  top: 180px;
   color: #fff;
-  padding: 20px;
-  
-  
+  padding: 20px;  
+}
+.breadcrumb-item+.breadcrumb-item::before {
+  content: var(--bs-breadcrumb-divider, "\f105");
+  font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+}
+.breadcrumb-item+.breadcrumb-item {
+  color: gray;
 }
 
 .Belwary_text p{
