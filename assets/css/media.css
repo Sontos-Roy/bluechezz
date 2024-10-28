@@ -25,7 +25,17 @@
       
     }
     @media (max-width: 992px){
-        
+      .belwary_text{
+        font-size: 30px;
+        left: 10px;
+        right: auto;
+        text-align: right;
+        position: absolute;
+        top: 80px;
+        color: #fff;
+        padding: 20px;
+        max-width: 400px;
+      }
     }
     /* Large devices (desktops, 992px and up)*/
     @media (min-width: 992px) {

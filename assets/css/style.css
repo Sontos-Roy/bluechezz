@@ -639,7 +639,7 @@ img {
   right: 50px;
   text-align: right;
   position: absolute;
-  top: 40%;
+  top: 30%;
   color: #fff;
   padding: 20px;
   max-width: 400px;
@@ -658,6 +658,20 @@ img {
   padding: 20px;
   
 }
+@media (max-width: 992px){
+  .regular_banner{
+    text-align: center;
+    
+  }
+  .regular_banner .Office_text{
+    right: auto;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    top: auto; 
+    bottom: 20px;
+  }
+}
 .ACCESSORIES_text{
   left: 50px;
   right: 50px;
@@ -670,12 +684,21 @@ img {
 .Belwary{
   justify-content: right;
   position: relative;
+  max-width: 100%;
+  width: 100%;
+  overflow: hidden;
 }
 .img_footer{
   margin-top: 10px;
 }
 .Belwary img{
   width: 100%;
+}
+.banner_bg{
+  background-size: cover;
+  min-height: 600px;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 .Belwary_text{
   

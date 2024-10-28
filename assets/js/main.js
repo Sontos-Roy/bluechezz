@@ -196,27 +196,25 @@
 $(document).ready(function() {
   const productItems = $('.product_section_box .row > div');
   
-  // Set the default column class to 'col-5' on page load
-  productItems.addClass('col-5');
-  
+  // Set the default column classes based on screen size using CSS classes
+  productItems.addClass('col-lg-6 col-md-5 col-sm-4 col-2');
+
   // Handle click on column toggler buttons
   $('.grid_list_toggler button').on('click', function() {
-    const colType = $(this).data('col'); // Get the column type from the button's data attribute
-    
-    // Remove active class from all buttons
+    const colType = $(this).data('col'); 
+
+    // Remove active class from all buttons and add it to the clicked button
     $('.grid_list_toggler button').removeClass('active');
-    
-    // Add active class to the clicked button
     $(this).addClass('active');
-    
+
     // Remove existing column classes from product items
-    productItems.removeClass('col-1 col-2 col-3 col-4 col-5 col-6 list-view list_view');
-    
+    productItems.removeClass('col-1 col-2 col-3 col-4 col-5 col-6 list-view list_view col-lg-6 col-md-5 col-sm-4 col-2');
+
     // Apply the new column class based on the selected button
     if (colType === 'list') {
       productItems.addClass('list-view list_view');
     } else {
-      productItems.addClass('col-' + colType);
+      productItems.addClass(`col-${colType}`);
     }
   });
 });

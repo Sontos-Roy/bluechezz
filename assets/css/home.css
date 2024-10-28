@@ -44,10 +44,7 @@
         text-align: start;
     }
 }
-.cat_item{
-    position: relative;
-    padding: 0;
-}
+
 .cat_item h4{
    
     position: absolute;
