@@ -174,7 +174,18 @@
       asNavFor: '.main_slider_box',
       dots: false,
       centerMode: false,
+      arrows: false,
       focusOnSelect: true,
+      vertical: true, // Default to vertical on desktop
+      responsive: [
+            {
+                breakpoint: 992, // Mobile breakpoint
+                settings: {
+                    vertical: false, // Horizontal slider for mobile
+                    slidesToShow: 4, // Adjust number of visible slides for smaller screens
+                }
+            }
+        ]
     });
     var $navSlider = $('.nav_slider_box');
     var navOffset = $navSlider.offset().top;
@@ -197,7 +208,7 @@ $(document).ready(function() {
   const productItems = $('.product_section_box .row > div');
   
   // Set the default column classes based on screen size using CSS classes
-  productItems.addClass('col-lg-6 col-md-5 col-sm-4 col-2');
+  productItems.addClass('col-lg-2 col-md-3 col-sm-4 col-6');
 
   // Handle click on column toggler buttons
   $('.grid_list_toggler button').on('click', function() {
@@ -208,13 +219,13 @@ $(document).ready(function() {
     $(this).addClass('active');
 
     // Remove existing column classes from product items
-    productItems.removeClass('col-1 col-2 col-3 col-4 col-5 col-6 list-view list_view col-lg-6 col-md-5 col-sm-4 col-2');
+    productItems.removeClass('col_1 col_2 col_3 col_4 col_5 col_6 list-view list_view col-lg-2 col-md-3 col-sm-4 col-6');
 
     // Apply the new column class based on the selected button
     if (colType === 'list') {
       productItems.addClass('list-view list_view');
     } else {
-      productItems.addClass(`col-${colType}`);
+      productItems.addClass(`col_${colType}`);
     }
   });
 });

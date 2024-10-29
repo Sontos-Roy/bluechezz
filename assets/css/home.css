@@ -150,3 +150,20 @@
   .section_title::after {
     
   }
+
+  .banner_bg{
+    background-size: cover;
+    min-height: 600px;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+
+
+  
+.card_font{
+
+}
+.products_row_w_100 img{
+    width: 100%;
+}
